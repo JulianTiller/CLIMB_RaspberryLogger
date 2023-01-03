@@ -1,0 +1,11 @@
+[Unit]
+Description=LogBerryLogger
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=no
+ExecStart=/usr/bin/python3 -u /home/pi/logger/logberry_startup_notify.py
+
+[Install]
+WantedBy=multi-user.target
